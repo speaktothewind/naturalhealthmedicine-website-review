@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Natural Health Medicine Website Review</title>
+<meta name="description" content="A plain-English review of naturalhealthmedicine.com.au: what to fix now and what a new website needs to get right.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light;
+    --navy:#16354E;
+    --navy-ink:#0F2638;
+    --olive:#788971;
+    --olive-deep:#5E6B52;
+    --olive-tint:#EEF0EA;
+    --greige:#D8D4D1;
+    --paper:#FAF9F6;
+    --sand:#EDE6DA;
+    --ink:#2D2D2D;
+    --ink-2:#55585A;
+    --line:#E2DED7;
+    --urgent:#9A3B2E;
+    --urgent-tint:#F6E9E6;
+    --high:#8A5A12;
+    --high-tint:#F5EEE1;
+    --med:#16354E;
+    --med-tint:#E8EDF1;
+    --good:#4E6B45;
+    --good-tint:#EAF0E6;
+    --serif:"Libre Caslon Text",Georgia,"Times New Roman",serif;
+    --sans:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;height:auto;display:block}
+  a{color:var(--navy);text-decoration-thickness:1px;text-underline-offset:3px}
+  a:hover{color:var(--olive-deep)}
+  :focus-visible{outline:3px solid var(--olive-deep);outline-offset:3px;border-radius:2px}
+  .wrap{max-width:56rem;margin:0 auto;padding:0 1.25rem}
+
+  /* Header */
+  .masthead{background:var(--navy);color:#F3F1EC;padding:clamp(2.5rem,7vw,4.5rem) 0 clamp(2.5rem,6vw,4rem)}
+  .masthead .logo{width:96px;margin:0 0 2rem;opacity:.95}
+  .kicker{font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#C9D3C4;margin:0 0 .9rem}
+  .masthead h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.1rem,6vw,3.5rem);line-height:1.08;margin:0 0 1.2rem;letter-spacing:-.01em;max-width:18ch}
+  .masthead h1 em{font-style:italic;color:#D6DECF}
+  .masthead .lede{font-size:1.15rem;max-width:40rem;margin:0 0 1.8rem;color:#E4E7EA}
+  .meta{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;font-size:.9rem;color:#C5CDD5;margin:0;padding:0;list-style:none}
+  .meta strong{color:#F3F1EC;font-weight:600}
+
+  /* Contents */
+  .toc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:1.3rem 1.5rem;margin:-2rem 0 0;position:relative;box-shadow:0 1px 2px rgba(22,53,78,.06)}
+  .toc h2{font-family:var(--sans);font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--olive-deep);margin:0 0 .6rem;border:0;padding:0}
+  .toc ol{margin:0;padding-left:1.3rem;columns:2;column-gap:2.5rem}
+  .toc li{break-inside:avoid;margin:0 0 .4rem;font-size:.97rem}
+  .toc a{text-decoration:none}
+  .toc a:hover{text-decoration:underline}
+  @media (max-width:640px){.toc ol{columns:1}}
+
+  main{padding-bottom:5rem}
+  section{padding-top:3.2rem}
+  h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.7rem,4vw,2.3rem);line-height:1.15;color:var(--navy);margin:0 0 1rem;letter-spacing:-.005em}
+  h2 .num{display:block;font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--olive-deep);margin-bottom:.5rem}
+  h3{font-family:var(--serif);font-weight:700;font-size:1.3rem;line-height:1.25;color:var(--navy-ink);margin:0 0 .5rem}
+  h4{font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin:1.1rem 0 .35rem}
+  p{margin:0 0 1rem;max-width:68ch}
+  .intro{font-size:1.08rem;color:var(--ink)}
+  ul,ol{padding-left:1.3rem;margin:0 0 1rem}
+  li{margin:.3rem 0;max-width:66ch}
+  strong{font-weight:700}
+
+  /* Short version */
+  .summary{background:var(--olive-tint);border-radius:10px;padding:1.6rem 1.7rem;margin-top:1.2rem}
+  .summary ol{margin:0;padding-left:1.4rem}
+  .summary li{margin:.55rem 0}
+
+  /* Scorecard */
+  .score{display:grid;gap:.6rem;margin-top:1.2rem;padding:0;list-style:none}
+  .score li{display:grid;grid-template-columns:minmax(11rem,15rem) 7.5rem 1fr;gap:1rem;align-items:baseline;background:#fff;border:1px solid var(--line);border-radius:8px;padding:.85rem 1.1rem;margin:0;max-width:none}
+  .score .area{font-weight:600;color:var(--navy-ink)}
+  .score .why{color:var(--ink-2);font-size:.95rem}
+  @media (max-width:700px){.score li{grid-template-columns:1fr auto;gap:.2rem .8rem}.score .why{grid-column:1 / -1}}
+
+  .tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .55rem;border-radius:4px;white-space:nowrap;line-height:1.3}
+  .t-urgent{background:var(--urgent-tint);color:var(--urgent)}
+  .t-high{background:var(--high-tint);color:var(--high)}
+  .t-med{background:var(--med-tint);color:var(--med)}
+  .t-good{background:var(--good-tint);color:var(--good)}
+
+  /* Fix-now list */
+  .fixnow{counter-reset:fx;list-style:none;padding:0;margin:1.2rem 0 0;display:grid;gap:.8rem}
+  .fixnow li{counter-increment:fx;position:relative;background:#fff;border:1px solid var(--line);border-radius:8px;padding:1rem 1.2rem 1rem 3.4rem;margin:0;max-width:none}
+  .fixnow li::before{content:counter(fx);position:absolute;left:1.1rem;top:1rem;width:1.6rem;height:1.6rem;border-radius:50%;background:var(--urgent);color:#fff;font-weight:700;font-size:.85rem;display:grid;place-items:center}
+  .fixnow strong{display:block;color:var(--navy-ink);margin-bottom:.15rem}
+  .fixnow span{color:var(--ink-2);font-size:.96rem}
+
+  /* Area cards */
+  .area-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.6rem 1.7rem 1.3rem;margin-top:1.4rem}
+  .area-head{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem;margin-bottom:.6rem}
+  .area-head h3{margin:0}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin-top:.4rem}
+  @media (max-width:760px){.cols{grid-template-columns:1fr;gap:.2rem}}
+  .cols ul{font-size:.97rem}
+  .do{background:var(--olive-tint);border-radius:8px;padding:.2rem 1.1rem .6rem}
+  .do h4{color:var(--olive-deep)}
+
+  figure{margin:1.2rem 0 .6rem}
+  figure img{border:1px solid var(--line);border-radius:8px;background:#fff}
+  figcaption{font-size:.85rem;color:var(--ink-2);margin-top:.45rem}
+  .shots{display:grid;grid-template-columns:3fr 1fr;gap:1rem;align-items:start}
+  @media (max-width:640px){.shots{grid-template-columns:1fr}.shots figure:last-child{max-width:240px}}
+
+  .callout{border-radius:10px;padding:1.2rem 1.4rem;margin:1.4rem 0 0;background:var(--high-tint);color:#4A3609}
+  .callout strong{color:#3B2A05}
+  .callout p:last-child{margin:0}
+
+  /* Tables */
+  .tablewrap{overflow-x:auto;margin:1rem 0 1.2rem;border:1px solid var(--line);border-radius:8px;background:#fff}
+  table{border-collapse:collapse;width:100%;font-size:.93rem;line-height:1.45}
+  th,td{text-align:left;vertical-align:top;padding:.7rem .85rem;border-bottom:1px solid var(--line)}
+  th{background:var(--sand);font-weight:700;color:var(--navy-ink)}
+  tr:last-child td{border-bottom:0}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .bad{color:var(--urgent);font-weight:700}
+
+  /* Keep */
+  .keep{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.8rem;list-style:none;padding:0;margin:1.2rem 0 0}
+  .keep li{background:var(--good-tint);border-radius:8px;padding:1rem 1.1rem;margin:0;max-width:none;font-size:.96rem}
+  .keep strong{display:block;color:var(--good);margin-bottom:.2rem}
+
+  /* Brand kit */
+  .swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr));gap:.8rem;margin:1.2rem 0}
+  .sw{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+  .sw .chip{height:72px}
+  .sw .lbl{padding:.6rem .75rem;font-size:.85rem;line-height:1.35}
+  .sw .lbl b{display:block;font-size:.92rem;color:var(--navy-ink)}
+  .sw code{font-family:ui-monospace,Menlo,monospace;font-size:.82rem;color:var(--ink-2)}
+  .fonts{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0}
+  @media (max-width:640px){.fonts{grid-template-columns:1fr}}
+  .font-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:1rem 1.2rem}
+  .font-card .sample{font-size:1.9rem;line-height:1.1;color:var(--navy);margin:.2rem 0 .4rem}
+  .font-card p{font-size:.9rem;color:var(--ink-2);margin:0}
+  .logos{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin:1rem 0}
+  .logos div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:1rem;display:grid;place-items:center;min-height:120px}
+  .logos div.dark{background:var(--navy);border-color:var(--navy)}
+
+  /* Sitemap */
+  .sitemap{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
+  @media (max-width:700px){.sitemap{grid-template-columns:1fr}}
+  .sitemap>div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:1rem 1.3rem}
+  .sitemap ul{font-size:.95rem;margin:0}
+  .sitemap ul ul{margin:.2rem 0 .3rem;color:var(--ink-2)}
+
+  .checklist{list-style:none;padding:0}
+  .checklist li{position:relative;padding-left:1.9rem;margin:.55rem 0}
+  .checklist li::before{content:"";position:absolute;left:0;top:.3rem;width:1.05rem;height:1.05rem;border:2px solid var(--olive-deep);border-radius:4px}
+
+  footer{background:var(--navy);color:#C5CDD5;font-size:.9rem;padding:2.5rem 0}
+  footer p{max-width:62ch}
+  footer strong{color:#F3F1EC}
+  footer a{color:#E4E7EA}
+
+  @media print{
+    .masthead,footer{background:#fff;color:var(--ink)}
+    .masthead h1,.masthead .lede,.meta strong{color:var(--navy)}
+    .toc{margin-top:1rem}
+    .area-card,.score li,.fixnow li{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <img class="logo" src="img/logo-stacked-white.png" alt="Natural Health Medicine logo" width="96" height="164">
+    <p class="kicker">Website review</p>
+    <h1>Where to start with your <em>new website</em></h1>
+    <p class="lede">What's working, what's holding the clinic back, and what to ask of whoever builds the next site. Written in plain English, with the most important things first.</p>
+    <ul class="meta">
+      <li>Prepared for <strong>Maria Harpas</strong></li>
+      <li>Site checked <strong>13/10/2026</strong></li>
+      <li><strong>naturalhealthmedicine.com.au</strong></li>
+    </ul>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <nav class="toc" aria-label="Contents">
+    <h2>In this review</h2>
+    <ol>
+      <li><a href="#short">The short version</a></li>
+      <li><a href="#glance">At a glance</a></li>
+      <li><a href="#now">Fix these now, before any rebuild</a></li>
+      <li><a href="#needs">What the new site must get right</a></li>
+      <li><a href="#keep">What's working, keep it</a></li>
+      <li><a href="#brand">Your brand kit</a></li>
+      <li><a href="#pages">Suggested page list</a></li>
+      <li><a href="#competitors">What local competitors do better</a></li>
+      <li><a href="#brief">Briefing a web designer</a></li>
+    </ol>
+  </nav>
+
+  <section id="short">
+    <h2><span class="num">01</span>The short version</h2>
+    <p class="intro">The clinic is better than its website shows. You have an experienced team, a 4.9-star Google rating, real depth in menopause, fertility and gut health, and clear prices inside the booking system. The website hides most of that.</p>
+    <div class="summary">
+      <ol>
+        <li><strong>A new visitor can't tell what you do.</strong> The homepage opens with a photo of peaches and "The science of you." There's no mention of naturopathy, Adelaide, menopause, or a booking button.</li>
+        <li><strong>Booking is hard to find, and some "Book" buttons go to the wrong place.</strong> Several open a practitioner's bio page instead of the booking system.</li>
+        <li><strong>The basics patients ask about aren't there:</strong> no prices, no health-fund rebate details, and almost no mention of video consults.</li>
+        <li><strong>It's slow on phones.</strong> The homepage scores 35 out of 100 for speed on mobile and takes about 8 seconds to show its main picture.</li>
+        <li><strong>A few pages carry legal risk</strong>, mainly health claims on the acupuncture page and a privacy policy copied from another business. These are worth fixing now, whether or not you rebuild.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="glance">
+    <h2><span class="num">02</span>At a glance</h2>
+    <p>How each part of the site stands today.</p>
+    <ul class="score">
+      <li><span class="area">Brand look and photos</span><span><span class="tag t-good">Strong</span></span><span class="why">Calm, premium logo and colours. Real team photos. Keep them.</span></li>
+      <li><span class="area">Homepage first impression</span><span><span class="tag t-urgent">Urgent</span></span><span class="why">Doesn't say what the clinic is, who it helps, or how to book.</span></li>
+      <li><span class="area">Booking</span><span><span class="tag t-urgent">Urgent</span></span><span class="why">Tiny link, five different destinations, some buttons go to bios.</span></li>
+      <li><span class="area">Prices, rebates, telehealth</span><span><span class="tag t-high">Missing</span></span><span class="why">All exist in the booking system but not on the website.</span></li>
+      <li><span class="area">Trust and reviews</span><span><span class="tag t-high">Hidden</span></span><span class="why">No reviews or credentials on the homepage. Team page is incomplete.</span></li>
+      <li><span class="area">Speed on phones</span><span><span class="tag t-high">Poor</span></span><span class="why">35/100 on mobile. 6.4 MB homepage. Slow server in Canada.</span></li>
+      <li><span class="area">Easy to read</span><span><span class="tag t-med">Needs work</span></span><span class="why">Faint text, zoom blocked on phones, small tap targets.</span></li>
+      <li><span class="area">Google and AI search</span><span><span class="tag t-high">Weak</span></span><span class="why">#1 for "naturopath Eastwood", but not in the top 30 for "naturopath Adelaide".</span></li>
+      <li><span class="area">Health advertising and privacy</span><span><span class="tag t-urgent">Urgent</span></span><span class="why">"Proven to treat" claims, outcome testimonials, a copied privacy policy.</span></li>
+    </ul>
+  </section>
+
+  <section id="now">
+    <h2><span class="num">03</span>Fix these now, before any rebuild</h2>
+    <p>These don't need a new website. They're small jobs on the current site or your Google listing, and they reduce real risk straight away.</p>
+    <ol class="fixnow">
+      <li><strong>Rewrite the acupuncture page.</strong><span>It says acupuncture is "proven to be effective in the treatment of" depression, asthma, rheumatoid arthritis, fertility issues and more. Acupuncture is a registered profession, so AHPRA's advertising rules apply, and this kind of list is exactly what they act on. Describe what a session involves and who does it instead, and have Jo and Nayu check the wording.</span></li>
+      <li><strong>Replace the privacy policy.</strong><span>The current one is a template that names another company's website ("woofmedia.com.au"), says nothing about health information, and isn't linked from anywhere. A clinic collecting health details online needs a proper policy, linked in the footer.</span></li>
+      <li><strong>Tidy your Google listing.</strong><span>It lists "Psychologist" as a category. That's a protected title, so remove it unless a registered psychologist works at the clinic. It also says reception is "never open on a Saturday", while your hours say 9.30 to 12.30. A separate "Sofi Bevan Naturopathy" listing uses the clinic's phone and says it closes at 2 am.</span></li>
+      <li><strong>Point every "Book" button at the booking system.</strong><span>On the Natural Medicine, Pathology, Acupuncture and Alzheimer pages, "Book Online" opens a bio page. "Call" opens a near-empty page instead of dialling. Two blog posts have a "Make a Booking" button that leads to a dead page.</span></li>
+      <li><strong>Remove links that aren't yours.</strong><span>The COVID page and the Medicare article contain links to a UK phone company, Amazon and an Irish pharmacy. The Dan Go article is copied in full under your name and still carries his paid links, so he earns money when your readers click. Delete or rewrite these.</span></li>
+      <li><strong>Hide client-only forms from Google.</strong><span>The intake questionnaires, nutrition diary, members-only login and an old trial consent form all appear in Google search results.</span></li>
+      <li><strong>Correct the old address.</strong><span>The Contact page's Google description still says "102 Portrush Rd Payneham South". It shows in search results right now.</span></li>
+    </ol>
+  </section>
+
+  <section id="needs">
+    <h2><span class="num">04</span>What the new site must get right</h2>
+    <p>Nine areas, most important first. For each: what we found, and what to ask for.</p>
+
+    <article class="area-card">
+      <div class="area-head"><h3>1. A homepage that says who you help</h3><span class="tag t-urgent">Urgent</span></div>
+      <div class="shots">
+        <figure><img src="img/home-desktop.jpg" alt="Current homepage on a laptop: a photo of peaches and books with the words The science of you" width="1200" height="750" loading="lazy"><figcaption>Today on a laptop: the first screen has no clinic description and no booking button.</figcaption></figure>
+        <figure><img src="img/home-mobile.jpg" alt="Current homepage on a phone" width="390" height="844" loading="lazy"><figcaption>On a phone.</figcaption></figure>
+      </div>
+      <div class="cols">
+        <div>
+          <h4>What we found</h4>
+          <ul>
+            <li>The slogan "The science of you." is part of the photo, so Google can't read it. The homepage has no main heading at all.</li>
+            <li>The first real content is a free ebook offer, then a long welcome essay and six general principles.</li>
+            <li>On a phone the homepage is about 15 screens long. Services start 8,000 pixels down, and the phone number only appears at the very bottom.</li>
+            <li>"National Medicine Specialist" (meant to be "Natural") appears six times.</li>
+          </ul>
+        </div>
+        <div class="do">
+          <h4>Ask for</h4>
+          <ul>
+            <li>A real headline on the first screen, for example: "Naturopaths and nutritionists in Eastwood, Adelaide. Menopause, hormones, fertility and gut health, in clinic or by video."</li>
+            <li>One clear "Book an appointment" button, plus "Not sure? Book a free 15-minute chat".</li>
+            <li>Then, in order: what we help with, how a first visit works (3 steps), meet Maria and the team, Google rating and reviews, free guide, location.</li>
+            <li>A real photo of you or the clinic instead of stock fruit.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="area-card">
+      <div class="area-head"><h3>2. Booking in one obvious step</h3><span class="tag t-urgent">Urgent</span></div>
+      <figure><img src="img/booking-desktop.jpg" alt="The SimpleClinic booking page on a laptop, showing a large decorative photo and a cookie banner" width="1200" height="750" loading="lazy"><figcaption>The booking page today: a large decorative photo, no clinic logo, and no practitioners until you scroll.</figcaption></figure>
+      <div class="cols">
+        <div>
+          <h4>What we found</h4>
+          <ul>
+            <li>The only homepage booking link is a small "BOOK ONLINE" in the top bar, and it disappears once you scroll.</li>
+            <li>"Book" buttons across the site go to five different places, including bio pages and an old booking address.</li>
+            <li>New patients pick from a list of 12 names with no specialties. That list doesn't match the team page.</li>
+            <li>Your bio says to email to book, and the only thing patients can book with you online is a free menopause call.</li>
+            <li>There are at least four differently named "free call" options.</li>
+          </ul>
+        </div>
+        <div class="do">
+          <h4>Ask for</h4>
+          <ul>
+            <li>A "Book now" button in the header that stays visible as you scroll. On phones, a fixed button at the bottom of the screen.</li>
+            <li>Every service page links straight to the right practitioner or appointment type (SimpleClinic supports direct links).</li>
+            <li>A "Not sure who to see?" option with one name and one link.</li>
+            <li>Tap-to-call phone numbers.</li>
+            <li>Separately, ask reception to tidy SimpleClinic: group appointment types, add specialties, swap the banner photo for your logo.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="area-card">
+      <div class="area-head"><h3>3. Show prices, rebates and video consults</h3><span class="tag t-high">High</span></div>
+      <div class="cols">
+        <div>
+          <h4>What we found</h4>
+          <ul>
+            <li>"How much is it?", "Can I claim it?" and "Can I do it online?" are the first three questions new patients ask. None are answered on the website.</li>
+            <li>The answers already exist in the booking system: a first naturopath visit is $245 to $295, follow-ups $115 to $185, with Zoom available for at least five practitioners.</li>
+            <li>Local competitors publish their fees. One shows them on its homepage.</li>
+          </ul>
+        </div>
+        <div class="do">
+          <h4>Ask for</h4>
+          <ul>
+            <li>One "Fees, rebates and telehealth" page: a simple table of first visit and follow-up, length, price, and whether health-fund rebates apply.</li>
+            <li>A line saying supplements and testing are extra.</li>
+            <li>"In clinic or by video, Australia-wide" on the homepage and every service page. This opens the clinic up to patients outside Adelaide.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="area-card">
+      <div class="area-head"><h3>4. Put the trust up front</h3><span class="tag t-high">High</span></div>
+      <div class="shots">
+        <figure><img src="img/team-desktop.jpg" alt="The current Meet the Team page on a laptop" width="1200" height="750" loading="lazy"><figcaption>The team photos are a real strength. They're just not on the homepage.</figcaption></figure>
+        <figure><img src="img/team-mobile.jpg" alt="The current Meet the Team page on a phone" width="390" height="844" loading="lazy"><figcaption>Team page on a phone.</figcaption></figure>
+      </div>
+      <div class="cols">
+        <div>
+          <h4>What we found</h4>
+          <ul>
+            <li>The homepage shows no reviews, no star rating, no qualifications and no association logos.</li>
+            <li>You have 4.9 stars from 39 Google reviews. AF Health has 291 and Merridy Casson 122. Review count matters a lot for Google Maps and AI recommendations.</li>
+            <li>Cathy, Sofi and Rohan can be booked online but aren't on the team page. Some practitioners have no job title.</li>
+            <li>Your experience is given as 12, 15 and 17 years on different pages.</li>
+            <li>Margherita's bio promotes Vega testing, which has no reliable evidence behind it and undercuts the "science-based" message.</li>
+          </ul>
+        </div>
+        <div class="do">
+          <h4>Ask for</h4>
+          <ul>
+            <li>Your photo, qualifications and memberships on the homepage.</li>
+            <li>The Google rating shown with a link to the reviews, plus a "Review us on Google" link. Ask happy patients for a review after their second visit.</li>
+            <li>A card for every practitioner with the same details: photo, title, what they help with, qualifications, association number (AHPRA number for acupuncturists), in clinic or video, rebates, and a "Book with" button.</li>
+            <li>One agreed set of facts used everywhere. "Practising since 20XX" never goes out of date.</li>
+            <li>An "As featured in" strip (Lovewell, your podcasts).</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="area-card">
+      <div class="area-head"><h3>5. Fast on phones</h3><span class="tag t-high">High</span></div>
+      <p>Tested with Google's own speed tool on a simulated phone on mobile data. Google's target for the main picture or heading to appear is under 2.5 seconds.</p>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>Measure</th><th class="num">Homepage, phone</th><th class="num">Homepage, laptop</th><th class="num">Services, phone</th></tr></thead>
+          <tbody>
+            <tr><td>Speed score (out of 100)</td><td class="num bad">35</td><td class="num">64</td><td class="num">63</td></tr>
+            <tr><td>Main picture or heading appears</td><td class="num bad">7.8 s</td><td class="num">3.2 s</td><td class="num">3.1 s</td></tr>
+            <tr><td>Fully ready to use</td><td class="num bad">14.2 s</td><td class="num">3.3 s</td><td class="num">10.3 s</td></tr>
+            <tr><td>Page jumps while loading (target under 0.1)</td><td class="num bad">1.19</td><td class="num">0.09</td><td class="num bad">0.62</td></tr>
+            <tr><td>Page size</td><td class="num bad">6.4 MB</td><td class="num">7.0 MB</td><td class="num">2.0 MB</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cols">
+        <div>
+          <h4>Why it's slow</h4>
+          <ul>
+            <li>Photos are far too big. One is 2.4 MB but shows as a small card. Photos make up 4.5 MB of the homepage.</li>
+            <li>The server is in Vancouver and rebuilds every page from scratch for each visitor. It takes 1.5 to 1.9 seconds just to start responding.</li>
+            <li>The page builder (Divi) plus two form tools and the shop load on every page, even where they aren't used.</li>
+            <li>Six font families load on every page. The brand only needs two.</li>
+          </ul>
+        </div>
+        <div class="do">
+          <h4>Ask for</h4>
+          <ul>
+            <li>A mobile speed score of 90+, and the main content showing in under 2.5 seconds. Ask the designer to show you the result before you pay the final invoice.</li>
+            <li>Australian hosting with page caching.</li>
+            <li>Photos resized and saved in modern formats (WebP).</li>
+            <li>Real text for headlines, never words inside a photo.</li>
+            <li>Two fonts, one form tool, and shop features only on shop pages.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="area-card">
+      <div class="area-head"><h3>6. Easy to read for everyone</h3><span class="tag t-med">Medium</span></div>
+      <p>Many of your patients are in the menopause and later-life age groups. Small, faint text costs you readers.</p>
+      <div class="cols">
+        <div>
+          <h4>What we found</h4>
+          <ul>
+            <li>White page titles on light grey banners are almost unreadable (contrast 1.76 to 1; the minimum is 3 to 1).</li>
+            <li>Your welcome text, white on olive, is also too faint for small text.</li>
+            <li>Pinch-to-zoom is switched off on phones.</li>
+            <li>32 of 37 tappable items on the mobile homepage are smaller than a fingertip.</li>
+            <li>Most images have no description, so blind visitors and Google can't tell what they show.</li>
+          </ul>
+        </div>
+        <div class="do">
+          <h4>Ask for</h4>
+          <ul>
+            <li>Navy text on light backgrounds, or white on navy. Use a deeper olive (#5E6B52) wherever white text sits on green.</li>
+            <li>Body text at 17 to 18 pixels, with lines no wider than about 70 characters.</li>
+            <li>Zoom allowed, and buttons at least 44 pixels tall.</li>
+            <li>A short description on every meaningful image.</li>
+            <li>A site that meets the WCAG 2.2 AA accessibility standard (designers will know this term).</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="area-card">
+      <div class="area-head"><h3>7. Found on Google and in AI answers</h3><span class="tag t-high">High</span></div>
+      <div class="cols">
+        <div>
+          <h4>What we found</h4>
+          <ul>
+            <li>You're #1 for "natural health medicine" and "naturopath Eastwood". You're not in the top 30 for "naturopath Adelaide".</li>
+            <li>For "menopause naturopath Adelaide", your signature area, only the team page shows, at #14.</li>
+            <li>Some page titles are copied from other pages. The fertility page is titled as a menopause page, and the pathology page as "eBooks & eCourses".</li>
+            <li>Google isn't told in the background that this is a local health clinic with an address, hours and practitioners.</li>
+            <li>There are no plain-English answers to common questions, which is what ChatGPT and Google's AI answers quote.</li>
+            <li>The blog has had 4 posts in the past year. Every post is credited to you, including other people's articles.</li>
+          </ul>
+        </div>
+        <div class="do">
+          <h4>Ask for</h4>
+          <ul>
+            <li>A clear title and summary for every page, written for what people search ("Menopause Naturopath Adelaide | Natural Health Medicine").</li>
+            <li>"Local business" details set up in the background, so Google and AI tools can read them (your designer will know this as schema markup).</li>
+            <li>A short FAQ on every service page: 5 to 8 questions, each answered in 2 or 3 plain sentences.</li>
+            <li>Each article shows the real author, their qualification and a "last reviewed" date.</li>
+            <li>One useful article a month, built around questions patients actually ask.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="area-card">
+      <div class="area-head"><h3>8. Careful health wording</h3><span class="tag t-high">High</span></div>
+      <div class="cols">
+        <div>
+          <h4>What we found</h4>
+          <ul>
+            <li>Testimonials describe health results: "saved my life", "lost over 6kg and menopause symptoms are completely gone".</li>
+            <li>Promises such as "breeze through menopause symptom-free" and "balanced hormones".</li>
+            <li>"Alzheimer Treatment" and "Reversing Cognitive Decline", and two clinic web addresses that forward to Tim's own business.</li>
+            <li>Menomize is sold in the shop without saying you're behind it. A review on menomize.com is signed "Vicky Harpas". If that's a family member, it should come down.</li>
+          </ul>
+        </div>
+        <div class="do">
+          <h4>Ask for</h4>
+          <ul>
+            <li>Testimonials about the experience ("I felt listened to") instead of outcomes. None on acupuncture or product pages.</li>
+            <li>"Support" and "help you understand" instead of "treat", "cure" or "symptom-free".</li>
+            <li>Rename the cognitive service, for example "Brain health and cognitive risk", working alongside the patient's GP. Make it clear who patients book with.</li>
+            <li>One honest line on the menopause page: "Maria co-founded Menomize. We'll only suggest it if it suits you."</li>
+            <li>Someone familiar with health advertising rules reads the new copy before launch.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="area-card">
+      <div class="area-head"><h3>9. Clear out the old, carefully</h3><span class="tag t-med">Medium</span></div>
+      <div class="cols">
+        <div>
+          <h4>What we found</h4>
+          <ul>
+            <li>96 pages and 230 posts. Naturopathy is covered on four separate pages, nutrition on four, Alzheimer's on two.</li>
+            <li>Leftovers: a COVID policy linked from every page, old webinar and thank-you pages, a test product, and a page showing broken code.</li>
+            <li>About 75% of the Health Library is from 2021 or earlier, and about 60 posts are recipes.</li>
+          </ul>
+        </div>
+        <div class="do">
+          <h4>Ask for</h4>
+          <ul>
+            <li>One page per service, with the old addresses forwarded to it.</li>
+            <li>Move across only the best 20 to 30 articles, updated and properly credited. Keep recipes in their own section.</li>
+            <li>Shop as one menu link, not three icons in the header.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout">
+        <p><strong>Don't lose your shop traffic.</strong> Most of the people who find the site on Google land on shop product pages, not clinic pages. In the top 40 searches that bring visitors, 25 go to /shop/ pages (for example "atrantil" at #1 and "perfect aminos" at #3). If the new site drops the shop or changes those addresses without forwarding them, that traffic disappears overnight. Whoever builds the site should list every current address and forward each one to its closest new page. Decide early whether the shop stays.</p>
+      </div>
+    </article>
+  </section>
+
+  <section id="keep">
+    <h2><span class="num">05</span>What's working, keep it</h2>
+    <ul class="keep">
+      <li><strong>Your brand</strong>The leaf logo, Caslon lettering, navy and olive feel calm and premium. Carry them across, don't replace them.</li>
+      <li><strong>Team photography</strong>Consistent, warm and real. Better than most clinic sites. Just show it earlier and bigger.</li>
+      <li><strong>Your voice and story</strong>Your lived experience of menopause is a genuine point of difference.</li>
+      <li><strong>Clear programs</strong>How To Do Menopause and How to Master Fertility say what's included. Tim's page is a model for transparent pricing and FAQs.</li>
+      <li><strong>Strong local base</strong>#1 for the clinic name and "naturopath Eastwood", with a 4.9-star rating.</li>
+      <li><strong>Good content to draw on</strong>The Vitamin B6 article (15 proper references), the Alzheimer page's research, your video, podcasts and the Lovewell interviews.</li>
+      <li><strong>Practical details</strong>Clear hours, parking via Moar Street, a map, and the same address and phone in every footer.</li>
+      <li><strong>Solid foundations</strong>Secure address, a working sitemap, spam-protected forms and up-to-date core software.</li>
+    </ul>
+  </section>
+
+  <section id="brand">
+    <h2><span class="num">06</span>Your brand kit</h2>
+    <p>Hand this to your designer. The colours come from your logo files, which are the true reference. The current site has drifted into four slightly different navies and three olives, so the new site should use just these.</p>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#16354E"></div><div class="lbl"><b>Navy</b><code>#16354E</code><br>Headings, main buttons, footer</div></div>
+      <div class="sw"><div class="chip" style="background:#788971"></div><div class="lbl"><b>Olive</b><code>#788971</code><br>Accents, icons, large headings</div></div>
+      <div class="sw"><div class="chip" style="background:#5E6B52"></div><div class="lbl"><b>Deep olive</b><code>#5E6B52</code><br>Whenever white text sits on green</div></div>
+      <div class="sw"><div class="chip" style="background:#D8D4D1"></div><div class="lbl"><b>Greige</b><code>#D8D4D1</code><br>Background panels</div></div>
+      <div class="sw"><div class="chip" style="background:#FAF9F6"></div><div class="lbl"><b>Warm white</b><code>#FAF9F6</code><br>Page background</div></div>
+      <div class="sw"><div class="chip" style="background:#2D2D2D"></div><div class="lbl"><b>Charcoal</b><code>#2D2D2D</code><br>Body text</div></div>
+    </div>
+    <div class="fonts">
+      <div class="font-card"><div class="sample" style="font-family:var(--serif)">Adobe Caslon Pro</div><p>Headings. It matches the "Functional Nutrition &amp; Naturopathy" line in your logo. Libre Caslon (free) is a close match.</p></div>
+      <div class="font-card"><div class="sample" style="font-family:var(--sans);font-weight:500">Apercu</div><p>Body text and buttons. The site also loads four other fonts that can go. Check you hold web licences for Apercu and Caslon before reusing them.</p></div>
+    </div>
+    <div class="logos">
+      <div><img src="img/logo-navy-stacked.png" alt="Navy stacked logo" width="140" height="114" loading="lazy"></div>
+      <div><img src="img/logo-olive-horizontal.png" alt="Olive horizontal logo" width="240" height="56" loading="lazy"></div>
+      <div class="dark"><img src="img/logo-stacked-white.png" alt="White stacked logo" width="62" height="106" loading="lazy"></div>
+    </div>
+    <p><strong>One ask:</strong> find the original logo design files (an SVG, AI or EPS file) from whoever designed it in 2021. The website only has small picture versions, and the leaf icon on its own is too small to use for anything bigger than a browser tab icon.</p>
+  </section>
+
+  <section id="pages">
+    <h2><span class="num">07</span>Suggested page list</h2>
+    <p>A simpler structure, built around what patients come in for.</p>
+    <div class="sitemap">
+      <div>
+        <h4>Main menu</h4>
+        <ul>
+          <li>Home</li>
+          <li>What we help with
+            <ul>
+              <li>Menopause and perimenopause</li>
+              <li>Fertility and preconception</li>
+              <li>Women's hormones, thyroid and PCOS</li>
+              <li>Gut health (IBS, SIBO, food intolerance)</li>
+              <li>Fatigue, sleep and stress</li>
+              <li>Brain health and cognitive risk</li>
+            </ul>
+          </li>
+          <li>Services
+            <ul>
+              <li>Naturopathy and clinical nutrition</li>
+              <li>Pathology testing and results</li>
+              <li>Acupuncture</li>
+              <li>Remedial massage</li>
+              <li>Counselling</li>
+            </ul>
+          </li>
+          <li>Our team (one page per practitioner)</li>
+          <li>Fees, rebates and telehealth</li>
+          <li>Health Library</li>
+          <li>Shop</li>
+          <li>Contact and location</li>
+          <li><strong>Book now</strong> (button, every page)</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Footer and secondary</h4>
+        <ul>
+          <li>Your first visit: how it works, what to bring, FAQ</li>
+          <li>Free 15-minute "find the right practitioner" call</li>
+          <li>Free guides</li>
+          <li>Working with your GP</li>
+          <li>Media and podcasts</li>
+          <li>Privacy policy, terms, shipping and returns</li>
+        </ul>
+        <h4>Leave behind</h4>
+        <ul>
+          <li>COVID policy page</li>
+          <li>Duplicate naturopathy and nutrition pages (forward them)</li>
+          <li>Old webinar and thank-you pages</li>
+          <li>The copied Dan Go and guest infertility posts</li>
+          <li>Juice Cleanse as a "service"</li>
+          <li>Empty "Book Maria" page and the shop test product</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="competitors">
+    <h2><span class="num">08</span>What local competitors do better</h2>
+    <p>The clinics that came up above you for "naturopath Adelaide" and "menopause naturopath Adelaide".</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Clinic</th><th class="num">Google reviews</th><th>What they do well</th></tr></thead>
+        <tbody>
+          <tr><td>AF Health</td><td class="num">4.9 (291)</td><td>Shows review count and awards on the homepage. Book button in every section, plus a free 15-minute call. A fees and rebates page. Every practitioner's degree and association in one line.</td></tr>
+          <tr><td>Merridy Casson</td><td class="num">4.9 (122)</td><td>Clear "Adelaide Naturopath &amp; Nutritionist" heading. A page per condition, and #1 for "menopause naturopath Adelaide". A homepage FAQ in plain sentences.</td></tr>
+          <tr><td>Adelaide Naturopathic</td><td class="num">n/a</td><td>Prices on the homepage. States qualifications up front. "In clinic or telehealth Australia-wide" in its Google description.</td></tr>
+          <tr><td>Solace Health</td><td class="num">n/a</td><td>Same booking system as you, but with one clear "Free Intro Call" button and a single women's health focus.</td></tr>
+          <tr><td><strong>Natural Health Medicine</strong></td><td class="num"><strong>4.9 (39)</strong></td><td>Same rating, a bigger team and deeper programs, but less of it is visible.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="brief">
+    <h2><span class="num">09</span>Briefing a web designer</h2>
+    <p>A checklist to take into conversations with designers. Anyone you're considering should be comfortable with every point.</p>
+    <div class="cols">
+      <div>
+        <h4>Have ready</h4>
+        <ul class="checklist">
+          <li>Original logo files and font licences</li>
+          <li>This review, and the page list above</li>
+          <li>One agreed set of facts: years in practice, address, hours, team, services</li>
+          <li>A current photo of you and the team</li>
+          <li>Fees, rebates and telehealth details per practitioner</li>
+          <li>SimpleClinic direct booking links for each practitioner and service</li>
+          <li>Logins for your domain, hosting and Google Business Profile</li>
+          <li>A decision on whether the shop stays</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Ask them</h4>
+        <ul class="checklist">
+          <li>Will you forward every old web address to a new page, including all shop products?</li>
+          <li>What mobile speed score will you hit, and will you show me before final payment?</li>
+          <li>Will it meet the WCAG 2.2 AA accessibility standard?</li>
+          <li>Will you set up local business details for Google, and a title and summary for every page?</li>
+          <li>Can I edit text, photos and add articles myself, without breaking the layout?</li>
+          <li>Where is it hosted, and what does hosting and upkeep cost each year?</li>
+          <li>Who checks the health wording against advertising rules before launch?</li>
+          <li>Who owns the site and the logins when you're finished? (It should be you.)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>How this review was done.</strong> On 13/10/2026 we read more than 25 pages on a laptop and a phone, ran Google's own speed test, checked 203 links and 330 images, looked at the clinic's Google listing and search rankings, and compared the site with four Adelaide clinics. Nothing on the live website was changed.</p>
+    <p>Prepared for Maria Harpas, Natural Health Medicine, 17 Glen Osmond Road, Eastwood SA.</p>
+  </div>
+</footer>
+
+</body>
+</html>
